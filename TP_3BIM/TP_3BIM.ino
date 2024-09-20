@@ -50,8 +50,7 @@ int azul = 5;
 int verde = 7;
 int buttonPin = 3;
 void setup() {
-  // Configuración del arduino
-    pinMode(amarillo, OUTPUT);
+  pinMode(amarillo, OUTPUT);
 pinMode(azul, OUTPUT);
 pinMode(rojo, OUTPUT);
 pinMode(verde, OUTPUT); 
