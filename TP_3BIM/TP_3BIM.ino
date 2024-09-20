@@ -1,13 +1,13 @@
 // Ejercicio evaluatorio 3er bimestre
 /*
   Integrantes
-    Nombre:
-    Apellido:
-    Curso:
+    Nombre: Agustin
+    Apellido: Hofmann
+    Curso: 3b TIC
     
-    Nombre:
-    Apellido:
-    Curso:
+    Nombre: Ramiro 
+    Apellido: Sanchez Rivera
+    Curso: 3b TIC
   
 Congisgnas
   Conexionado:
@@ -16,10 +16,10 @@ Congisgnas
     Indicar a continuación los pines a los cuales se conectó cada elemento y el valor de resistencias utilizado:
       Pines:
         Boton:
-        LED1:
-        LED2:
-        LED3:
-        LED4:
+        LED1: ROJO (9)
+        LED2: azul (5)
+        LED3: verde (7)
+        LED4: amarillo (11)
       Valor:
         R_boton:
         R_LEDs:
@@ -44,13 +44,34 @@ Congisgnas
         IMPORTANTE: si el nro es mayor a 15 se deberá enviar un mensaje de error. 
 
 */ 
-
-
+int amarillo = 11;
+int rojo = 9;
+int azul = 5;
+int verde = 7;
+int buttonPin = 3;
 void setup() {
   // Configuración del arduino
+    pinMode(amarillo, OUTPUT);
+pinMode(azul, OUTPUT);
+pinMode(rojo, OUTPUT);
+pinMode(verde, OUTPUT); 
+pinMode(buttonPin, INPUT);
 }
 
 void loop() {
-  // Logica del programa
 
+  // Logica del programa
+  
+int buttonState = digitalRead(buttonPin);
+ if(buttonState == HIGH){
+  digitalWrite(amarillo, HIGH);
+  digitalWrite(azul, HIGH);
+  digitalWrite(rojo, HIGH);
+  digitalWrite(verde, HIGH);
+ } else {
+  digitalWrite(amarillo, LOW);
+  digitalWrite(azul, LOW);
+  digitalWrite(rojo, LOW);
+  digitalWrite(verde, LOW);
+  }
 }
